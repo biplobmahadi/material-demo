@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -18,33 +19,35 @@ export default function ProductCard() {
     const classes = useStyles();
 
     return (
-        <Card className={classes.root}>
-            <CardActionArea>
-                <CardMedia
-                    component='img'
-                    alt='Contemplative Reptile'
-                    height='240'
-                    image='/aa.jpg'
-                    title='Contemplative Reptile'
-                />
-                <CardContent>
-                    <Typography gutterBottom variant='h6'>
-                        <Box textAlign='center'>Narrow Ti-Shirt</Box>
-                    </Typography>
-                    <Typography gutterBottom variant='h5'>
-                        <Box textAlign='center' color='secondary.main'>
-                            Tk. 220
+        <Link href='/product'>
+            <Card className={classes.root}>
+                <CardActionArea>
+                    <CardMedia
+                        component='img'
+                        alt='Contemplative Reptile'
+                        height='240'
+                        image='/aa.jpg'
+                        title='Contemplative Reptile'
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant='h6'>
+                            <Box textAlign='center'>Narrow Ti-Shirt</Box>
+                        </Typography>
+                        <Typography gutterBottom variant='h5'>
+                            <Box textAlign='center' color='secondary.main'>
+                                Tk. 220
+                            </Box>
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+                <CardActions style={{ justifyContent: 'center' }}>
+                    <Button variant='contained' size='small' color='primary'>
+                        <Box textAlign='center' px={4}>
+                            Add To Bag
                         </Box>
-                    </Typography>
-                </CardContent>
-            </CardActionArea>
-            <CardActions style={{ justifyContent: 'center' }}>
-                <Button variant='contained' size='small' color='primary'>
-                    <Box textAlign='center' px={4}>
-                        Add To Bag
-                    </Box>
-                </Button>
-            </CardActions>
-        </Card>
+                    </Button>
+                </CardActions>
+            </Card>
+        </Link>
     );
 }

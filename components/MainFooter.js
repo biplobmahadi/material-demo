@@ -44,9 +44,6 @@ export default function MainFooter() {
                             <span>
                                 <strong>Facebook</strong>
                             </span>
-                            <span>
-                                <strong>Facebook</strong>
-                            </span>
                         </div>
                     </Grid>
 

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Drawer from '@material-ui/core/Drawer';
@@ -51,15 +52,15 @@ export default function ButtonAppBar() {
     const [state, setState] = React.useState({
         left: false,
     });
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = React.useState(false);
     const handleClick = () => {
         setOpen(!open);
     };
-    const [openAgain, setOpenAgain] = React.useState(true);
+    const [openAgain, setOpenAgain] = React.useState(false);
     const handleClickAgain = () => {
         setOpenAgain(!openAgain);
     };
-    const [openAgainAgain, setOpenAgainAgain] = React.useState(true);
+    const [openAgainAgain, setOpenAgainAgain] = React.useState(false);
     const handleClickAgainAgain = () => {
         setOpenAgainAgain(!openAgainAgain);
     };
@@ -82,12 +83,14 @@ export default function ButtonAppBar() {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List dense component='nav' aria-labelledby='nested-list-subheader'>
-                <ListItem button>
-                    <ListItemIcon>
-                        <SendIcon />
-                    </ListItemIcon>
-                    <ListItemText primary='Sent mail' />
-                </ListItem>
+                <Link href='/categories'>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <SendIcon />
+                        </ListItemIcon>
+                        <ListItemText primary='Sent mail' />
+                    </ListItem>
+                </Link>
                 <ListItem button>
                     <ListItemIcon>
                         <DraftsIcon />
@@ -103,12 +106,14 @@ export default function ButtonAppBar() {
                 </ListItem>
                 <Collapse in={open} timeout='auto' unmountOnExit>
                     <List dense component='div' disablePadding>
-                        <ListItem button className={classes.nested}>
-                            <ListItemIcon>
-                                <StarBorder />
-                            </ListItemIcon>
-                            <ListItemText primary='Starred' />
-                        </ListItem>
+                        <Link href='/sub-categories'>
+                            <ListItem button className={classes.nested}>
+                                <ListItemIcon>
+                                    <StarBorder />
+                                </ListItemIcon>
+                                <ListItemText primary='Starred' />
+                            </ListItem>
+                        </Link>
                         <ListItem button className={classes.nested}>
                             <ListItemIcon>
                                 <StarBorder />
@@ -223,9 +228,11 @@ export default function ButtonAppBar() {
                     >
                         {list('left')}
                     </Drawer>
-                    <Typography variant='h6' className={classes.title}>
-                        News
-                    </Typography>
+                    <Link href='/'>
+                        <Typography variant='h6' className={classes.title}>
+                            Logo.com
+                        </Typography>
+                    </Link>
                     <IconButton color='inherit' aria-label='cart'>
                         <Badge badgeContent={4} color='secondary'>
                             <ShoppingCartIcon />
