@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -18,28 +19,36 @@ export default function ImgMediaCard() {
     const classes = useStyles();
 
     return (
-        <Card className={classes.root}>
-            <CardActionArea>
-                <CardMedia
-                    component='img'
-                    alt='Contemplative Reptile'
-                    height='240'
-                    image='/aa.jpg'
-                    title='Contemplative Reptile'
-                />
-                <CardContent>
-                    <Typography gutterBottom variant='h5' component='h2'>
-                        <Box textAlign='center'>Khula Mela</Box>
-                    </Typography>
-                </CardContent>
-            </CardActionArea>
-            <CardActions style={{ justifyContent: 'center' }}>
-                <Button variant='contained' size='small' color='primary'>
-                    <Box textAlign='center' px={4}>
-                        Buy Now
-                    </Box>
-                </Button>
-            </CardActions>
-        </Card>
+        <Link href='/tranding-product'>
+            <Card className={classes.root}>
+                <CardActionArea>
+                    <CardMedia
+                        component='img'
+                        alt='Contemplative Reptile'
+                        height='240'
+                        image='/aa.jpg'
+                        title='Contemplative Reptile'
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant='h5' component='h2'>
+                            <Box textAlign='center'>Khula Mela</Box>
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+                <CardActions style={{ justifyContent: 'center' }}>
+                    <Link href='/tranding-product'>
+                        <Button
+                            variant='contained'
+                            size='small'
+                            color='primary'
+                        >
+                            <Box textAlign='center' px={4}>
+                                Buy Now
+                            </Box>
+                        </Button>
+                    </Link>
+                </CardActions>
+            </Card>
+        </Link>
     );
 }

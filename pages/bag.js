@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Head from 'next/head';
 import ButtonAppBar from '../components/ButtonAppBar';
 import Card from '../components/Card';
@@ -84,11 +85,16 @@ export default function Bag() {
                             <br />
                             <Grid container spacing={2}>
                                 <Grid item xs={12} sm>
-                                    <Button variant='contained' color='primary'>
-                                        <Box textAlign='center' px={4}>
-                                            Pay For You
-                                        </Box>
-                                    </Button>
+                                    <Link href='/address'>
+                                        <Button
+                                            variant='contained'
+                                            color='primary'
+                                        >
+                                            <Box textAlign='center' px={4}>
+                                                Pay For You
+                                            </Box>
+                                        </Button>
+                                    </Link>
                                 </Grid>
                                 <Grid item xs={12} sm>
                                     <Button variant='contained' color='primary'>

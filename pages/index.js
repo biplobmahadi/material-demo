@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import ButtonAppBar from '../components/ButtonAppBar';
+import Carousel from '../components/Carousel';
 import Card from '../components/Card';
 import ProductCard from '../components/ProductCard';
 import Footer from '../components/Footer';
@@ -24,10 +25,20 @@ export default function Home() {
                 ></meta>
             </Head>
             <ButtonAppBar />
+            <Box
+                mt={11}
+                mx={3}
+                p={2}
+                textAlign='center'
+                borderRadius='borderRadius'
+                style={{ backgroundColor: '#E6E6FA' }}
+            >
+                <Carousel />
+            </Box>
             {/* <Carousel /> */}
             <Box
                 mx={3}
-                mt={12}
+                mt={4}
                 p={2}
                 borderRadius='borderRadius'
                 style={{ backgroundColor: '#E6E6FA' }}

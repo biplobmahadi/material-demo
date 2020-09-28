@@ -91,12 +91,14 @@ export default function ButtonAppBar() {
                         <ListItemText primary='Sent mail' />
                     </ListItem>
                 </Link>
-                <ListItem button>
-                    <ListItemIcon>
-                        <DraftsIcon />
-                    </ListItemIcon>
-                    <ListItemText primary='Drafts' />
-                </ListItem>
+                <Link href='/tranding'>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <DraftsIcon />
+                        </ListItemIcon>
+                        <ListItemText primary='Tranding' />
+                    </ListItem>
+                </Link>
                 <ListItem button onClick={handleClick}>
                     <ListItemIcon>
                         <InboxIcon />
