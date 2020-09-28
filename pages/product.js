@@ -50,7 +50,12 @@ export default function Product() {
                                 borderRadius='borderRadius'
                                 style={{ backgroundColor: 'white' }}
                             >
-                                <SubCataCard />
+                                <img
+                                    src='/aa.jpg'
+                                    alt='product image'
+                                    height='100%'
+                                    width='100%'
+                                />
                             </Box>
                         </Grid>
                         <Grid item xs={12} sm>

@@ -233,11 +233,13 @@ export default function ButtonAppBar() {
                             Logo.com
                         </Typography>
                     </Link>
-                    <IconButton color='inherit' aria-label='cart'>
-                        <Badge badgeContent={4} color='secondary'>
-                            <ShoppingCartIcon />
-                        </Badge>
-                    </IconButton>
+                    <Link href='/bag'>
+                        <IconButton color='inherit' aria-label='cart'>
+                            <Badge badgeContent={40000} color='secondary'>
+                                <ShoppingCartIcon />
+                            </Badge>
+                        </IconButton>
+                    </Link>
                     <IconButton color='inherit' aria-label='lottery'>
                         <BallotIcon />
                     </IconButton>

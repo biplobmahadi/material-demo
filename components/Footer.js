@@ -21,45 +21,152 @@ export default function Footer() {
     const classes = useStyles();
 
     return (
-        <Box textAlign='center'>
-            <Grid container>
-                <Grid container item xs={12} sm>
-                    <Grid item xs={12} sm>
-                        <Chip label='Full Refund' color='secondary' />
+        <div>
+            <Box
+                m={3}
+                p={2}
+                borderRadius='borderRadius'
+                style={{ backgroundColor: '#E6E6FA' }}
+            >
+                <Grid container spacing={2}>
+                    <Grid container item xs={12} sm>
+                        <Grid item xs sm>
+                            <Box
+                                p={2}
+                                mx={2}
+                                height='100%'
+                                textAlign='center'
+                                borderRadius='borderRadius'
+                                style={{ backgroundColor: 'white' }}
+                            >
+                                <Chip label='Full Refund' color='secondary' />
+                            </Box>
+                        </Grid>
+                        <Grid item xs sm>
+                            <Box
+                                p={2}
+                                mx={2}
+                                height='100%'
+                                textAlign='center'
+                                borderRadius='borderRadius'
+                                style={{ backgroundColor: 'white' }}
+                            >
+                                <Chip label='Happy Return' color='secondary' />
+                            </Box>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={12} sm>
-                        <Chip label='Happy Return' color='secondary' />
+                    <Grid container item xs={12} sm>
+                        <Grid item xs sm>
+                            <Box
+                                p={2}
+                                mx={2}
+                                height='100%'
+                                textAlign='center'
+                                borderRadius='borderRadius'
+                                style={{ backgroundColor: 'white' }}
+                            >
+                                <Button
+                                    variant='contained'
+                                    size='small'
+                                    color='primary'
+                                >
+                                    <Box px={3}>Advise</Box>
+                                </Button>
+                            </Box>
+                        </Grid>
+                        <Grid item xs sm>
+                            <Box
+                                p={2}
+                                mx={2}
+                                height='100%'
+                                textAlign='center'
+                                borderRadius='borderRadius'
+                                style={{ backgroundColor: 'white' }}
+                            >
+                                <Button
+                                    variant='contained'
+                                    size='small'
+                                    color='primary'
+                                >
+                                    <Box px={3}>Complain</Box>
+                                </Button>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                    <Grid container item xs={12} sm>
+                        <Grid item xs sm>
+                            <Box
+                                p={2}
+                                mx={2}
+                                height='100%'
+                                textAlign='center'
+                                borderRadius='borderRadius'
+                                style={{ backgroundColor: 'white' }}
+                            >
+                                <Chip
+                                    label='Cash On Delivery'
+                                    color='secondary'
+                                />
+                            </Box>
+                        </Grid>
+                        <Grid item xs sm>
+                            <Box
+                                p={2}
+                                mx={2}
+                                height='100%'
+                                textAlign='center'
+                                borderRadius='borderRadius'
+                                style={{ backgroundColor: 'white' }}
+                            >
+                                <Chip
+                                    label='Delivery Tk. 50'
+                                    color='secondary'
+                                />
+                            </Box>
+                        </Grid>
                     </Grid>
                 </Grid>
-                <Grid container item xs={12} sm>
-                    <Grid item xs={12} sm>
-                        <Button
-                            variant='contained'
-                            size='small'
-                            color='primary'
-                        >
-                            <Box px={3}>Advise</Box>
-                        </Button>
+            </Box>
+            {/* <Box textAlign='center'>
+                <Grid container>
+                    <Grid container item xs={12} sm>
+                        <Grid item xs={12} sm>
+                            <Chip label='Full Refund' color='secondary' />
+                        </Grid>
+                        <Grid item xs={12} sm>
+                            <Chip label='Happy Return' color='secondary' />
+                        </Grid>
                     </Grid>
-                    <Grid item xs={12} sm>
-                        <Button
-                            variant='contained'
-                            size='small'
-                            color='primary'
-                        >
-                            <Box px={3}>Complain</Box>
-                        </Button>
+                    <Grid container item xs={12} sm>
+                        <Grid item xs={12} sm>
+                            <Button
+                                variant='contained'
+                                size='small'
+                                color='primary'
+                            >
+                                <Box px={3}>Advise</Box>
+                            </Button>
+                        </Grid>
+                        <Grid item xs={12} sm>
+                            <Button
+                                variant='contained'
+                                size='small'
+                                color='primary'
+                            >
+                                <Box px={3}>Complain</Box>
+                            </Button>
+                        </Grid>
+                    </Grid>
+                    <Grid container item xs={12} sm>
+                        <Grid item xs={12} sm>
+                            <Chip label='Cash On Delivery' color='secondary' />
+                        </Grid>
+                        <Grid item xs={12} sm>
+                            <Chip label='Delivery Tk. 50' color='secondary' />
+                        </Grid>
                     </Grid>
                 </Grid>
-                <Grid container item xs={12} sm>
-                    <Grid item xs={12} sm>
-                        <Chip label='Cash On Delivery' color='secondary' />
-                    </Grid>
-                    <Grid item xs={12} sm>
-                        <Chip label='Delivery Tk. 50' color='secondary' />
-                    </Grid>
-                </Grid>
-            </Grid>
-        </Box>
+            </Box> */}
+        </div>
     );
 }

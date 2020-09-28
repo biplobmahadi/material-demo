@@ -5,7 +5,7 @@ import ProductCard from '../components/ProductCard';
 import Footer from '../components/Footer';
 import MainFooter from '../components/MainFooter';
 import Box from '@material-ui/core/Box';
-import Divider from '@material-ui/core/Divider';
+import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 export default function Home() {
@@ -34,10 +34,23 @@ export default function Home() {
             >
                 <Box
                     p={2}
+                    display='flex'
+                    alignItems='center'
                     borderRadius='borderRadius'
                     style={{ backgroundColor: 'white' }}
                 >
-                    <Typography variant='h4'>Tranding Now</Typography>
+                    <Box height='100%' flexGrow={1}>
+                        <Typography variant='h3'>Tranding Now</Typography>
+                    </Box>
+                    <Box height='100%'>
+                        <Button
+                            variant='contained'
+                            size='small'
+                            color='secondary'
+                        >
+                            <Box px={3}>See All</Box>
+                        </Button>
+                    </Box>
                 </Box>
 
                 <Grid container spacing={3}>
