@@ -23,6 +23,9 @@ import SendIcon from '@material-ui/icons/Send';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import StarBorder from '@material-ui/icons/StarBorder';
+import Divider from '@material-ui/core/Divider';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 
@@ -49,6 +52,17 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ButtonAppBar() {
     const classes = useStyles();
+    // for menu
+    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const handleClickMenu = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+    // end for menu
     const [state, setState] = React.useState({
         left: false,
     });
@@ -245,9 +259,58 @@ export default function ButtonAppBar() {
                     <IconButton color='inherit' aria-label='lottery'>
                         <BallotIcon />
                     </IconButton>
-                    <IconButton color='inherit' aria-label='account'>
+                    <IconButton
+                        color='inherit'
+                        aria-label='account'
+                        aria-controls='simple-menu'
+                        aria-haspopup='true'
+                        onClick={handleClickMenu}
+                    >
                         <AccountCircleIcon />
                     </IconButton>
+                    {/* menu create */}
+                    <Menu
+                        id='simple-menu'
+                        anchorEl={anchorEl}
+                        keepMounted
+                        open={Boolean(anchorEl)}
+                        onClose={handleClose}
+                    >
+                        <Link href='my-account'>
+                            <MenuItem onClick={handleClose}>
+                                My account
+                            </MenuItem>
+                        </Link>
+                        <Divider variant='middle' />
+                        <Link href='my-orders'>
+                            <MenuItem onClick={handleClose}>My Orders</MenuItem>
+                        </Link>
+                        <Divider variant='middle' />
+                        <Link href='my-lottery'>
+                            <MenuItem onClick={handleClose}>
+                                My Lottery
+                            </MenuItem>
+                        </Link>
+                        <Divider variant='middle' />
+                        <Link href='my-review'>
+                            <MenuItem onClick={handleClose}>My Review</MenuItem>
+                        </Link>
+                        <Divider variant='middle' />
+                        <Link href='my-video-review'>
+                            <MenuItem onClick={handleClose}>
+                                My Video Review
+                            </MenuItem>
+                        </Link>
+                        <Divider variant='middle' />
+                        <Link href='my-gift'>
+                            <MenuItem onClick={handleClose}>I Gift It</MenuItem>
+                        </Link>
+                        <Divider variant='middle' />
+                        <Link href='/'>
+                            <MenuItem onClick={handleClose}>Logout</MenuItem>
+                        </Link>
+                    </Menu>
+                    {/* menu end */}
                 </Toolbar>
             </AppBar>
         </div>
