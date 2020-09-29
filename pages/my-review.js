@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import ButtonAppBar from '../components/ButtonAppBar';
-import Card from '../components/Card';
-import ProductTable from '../components/ProductTable';
 import ProductCard from '../components/ProductCard';
+import ProductTable from '../components/ProductTable';
+import AccountOptionList from '../components/AccountOptionList';
 import Footer from '../components/Footer';
 import MainFooter from '../components/MainFooter';
 import Box from '@material-ui/core/Box';
@@ -14,7 +14,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import AccountOptionList from '../components/AccountOptionList';
 
 const useStyles = makeStyles({
     root: {
@@ -22,7 +21,7 @@ const useStyles = makeStyles({
         marginTop: '16px',
     },
 });
-export default function MyAccount() {
+export default function MyReview() {
     const classes = useStyles();
     const [value, setValue] = React.useState('0');
 
@@ -33,7 +32,7 @@ export default function MyAccount() {
         <div>
             {' '}
             <Head>
-                <title>My Account</title>
+                <title>My Review</title>
                 <link rel='icon' href='/a.ico' />
                 <link
                     rel='stylesheet'
@@ -91,7 +90,7 @@ export default function MyAccount() {
                                 style={{ backgroundColor: 'white' }}
                             >
                                 <Typography variant='h5'>
-                                    <strong>My Account</strong>
+                                    <strong>My Reviews & Ratings</strong>
                                 </Typography>
                             </Box>
                             <Paper className={classes.root}>
@@ -102,10 +101,11 @@ export default function MyAccount() {
                                     textColor='primary'
                                     centered
                                 >
-                                    <Tab label='Account Details' value='0' />
-                                    <Tab label='Update Account' value='1' />
-                                    <Tab label='Change Password' value='2' />
-                                    <Tab label='Logout' value='3' />
+                                    <Tab label='Reviewed Product' value='0' />
+                                    <Tab
+                                        label='Not Reviewed Product'
+                                        value='1'
+                                    />
                                 </Tabs>
                             </Paper>
                             <Box
@@ -115,7 +115,39 @@ export default function MyAccount() {
                                 borderRadius='borderRadius'
                                 style={{ backgroundColor: 'white' }}
                             >
-                                <Typography>{value}</Typography>
+                                {/* <Typography>{value}</Typography> */}
+                                <Grid container spacing={3}>
+                                    <Grid item xs={12} sm={3}>
+                                        <ProductCard />
+                                    </Grid>
+                                    <Grid item xs={12} sm={3}>
+                                        <ProductCard />
+                                    </Grid>
+                                    <Grid item xs={12} sm={3}>
+                                        <ProductCard />
+                                    </Grid>
+                                    <Grid item xs={12} sm={3}>
+                                        <ProductCard />
+                                    </Grid>
+                                    <Grid item xs={12} sm={3}>
+                                        <ProductCard />
+                                    </Grid>
+                                    <Grid item xs={12} sm={3}>
+                                        <ProductCard />
+                                    </Grid>
+                                    <Grid item xs={12} sm={3}>
+                                        <ProductCard />
+                                    </Grid>
+                                    <Grid item xs={12} sm={3}>
+                                        <ProductCard />
+                                    </Grid>
+                                    <Grid item xs={12} sm={3}>
+                                        <ProductCard />
+                                    </Grid>
+                                    <Grid item xs={12} sm={3}>
+                                        <ProductCard />
+                                    </Grid>
+                                </Grid>
                             </Box>
                         </Grid>
                     </Grid>

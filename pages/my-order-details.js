@@ -14,6 +14,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import AccountOptionList from '../components/AccountOptionList';
 
 import TrackingStepper from '../components/TrackingStepper';
 const useStyles = makeStyles({
@@ -49,37 +50,93 @@ export default function MyOrderDetails() {
                 mx={3}
                 mt={11}
                 p={2}
-                textAlign='center'
                 borderRadius='borderRadius'
                 style={{ backgroundColor: '#E6E6FA' }}
             >
                 <Box
                     p={2}
+                    boxShadow={1}
+                    textAlign='center'
                     borderRadius='borderRadius'
                     style={{ backgroundColor: 'white' }}
                 >
-                    <TrackingStepper />
+                    <img
+                        src='/aa.jpg'
+                        alt=''
+                        srcset=''
+                        height='60'
+                        width='60'
+                        style={{ borderRadius: '50%' }}
+                    />
+                    <Typography variant='h5'>
+                        <strong>BIPLOB MAHADI</strong>
+                    </Typography>
                 </Box>
-                <Paper className={classes.root}>
-                    <Tabs
-                        value={value}
-                        onChange={handleChange}
-                        indicatorColor='primary'
-                        textColor='primary'
-                        centered
-                    >
-                        <Tab label='Order Details' value='0' />
-                        <Tab label='Receiver Address' value='1' />
-                        <Tab label='Ordered Products' value='2' />
-                    </Tabs>
-                </Paper>
-                <Box
-                    mt={3}
-                    p={2}
-                    borderRadius='borderRadius'
-                    style={{ backgroundColor: 'white' }}
-                >
-                    <Typography>{value}</Typography>
+                <Box mt={3}>
+                    <Grid container spacing={3}>
+                        <Grid item xs={12} sm={3}>
+                            <Box
+                                p={1}
+                                boxShadow={1}
+                                borderRadius='borderRadius'
+                                style={{ backgroundColor: 'white' }}
+                            >
+                                <AccountOptionList />
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} sm>
+                            <Box
+                                p={2}
+                                boxShadow={1}
+                                display='flex'
+                                alignItems='center'
+                                borderRadius='borderRadius'
+                                style={{ backgroundColor: 'white' }}
+                            >
+                                <Box height='100%' flexGrow={1}>
+                                    <Typography variant='h5'>
+                                        <strong>My Orders Details</strong>
+                                    </Typography>
+                                </Box>
+                                <Box height='100%'>
+                                    <Button variant='contained' size='small'>
+                                        <Box px={3}>Order ID: 12</Box>
+                                    </Button>
+                                </Box>
+                            </Box>
+                            <Box
+                                p={2}
+                                mt={3}
+                                boxShadow={1}
+                                borderRadius='borderRadius'
+                                style={{ backgroundColor: 'white' }}
+                            >
+                                <TrackingStepper />
+                            </Box>
+                            <Paper className={classes.root}>
+                                <Tabs
+                                    value={value}
+                                    onChange={handleChange}
+                                    indicatorColor='primary'
+                                    textColor='primary'
+                                    centered
+                                >
+                                    <Tab label='Order Details' value='0' />
+                                    <Tab label='Receiver Address' value='1' />
+                                    <Tab label='Ordered Products' value='2' />
+                                </Tabs>
+                            </Paper>
+                            <Box
+                                mt={2}
+                                p={2}
+                                boxShadow={1}
+                                borderRadius='borderRadius'
+                                style={{ backgroundColor: 'white' }}
+                            >
+                                <Typography>{value}</Typography>
+                            </Box>
+                        </Grid>
+                    </Grid>
                 </Box>
             </Box>
             <Box style={{ backgroundColor: '#E6E6FA' }} mt={4}>

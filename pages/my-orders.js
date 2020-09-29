@@ -11,6 +11,7 @@ import Chip from '@material-ui/core/Chip';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import AccountOptionList from '../components/AccountOptionList';
 
 export default function MyOrders() {
     return (
@@ -30,8 +31,8 @@ export default function MyOrders() {
             </Head>
             <ButtonAppBar />
             <Box
-                mt={11}
                 mx={3}
+                mt={11}
                 p={2}
                 borderRadius='borderRadius'
                 style={{ backgroundColor: '#E6E6FA' }}
@@ -39,111 +40,159 @@ export default function MyOrders() {
                 <Box
                     p={2}
                     boxShadow={1}
-                    display='flex'
-                    alignItems='center'
+                    textAlign='center'
                     borderRadius='borderRadius'
                     style={{ backgroundColor: 'white' }}
                 >
-                    <Box height='100%' flexGrow={1}>
-                        <Typography variant='h5'>
-                            <strong>My Orders</strong>{' '}
-                            <Chip
-                                label={`Total ${12}`}
-                                color='secondary'
-                                size='small'
-                            />
-                        </Typography>
-                    </Box>
-                    <Box height='100%'>
-                        <Button
-                            variant='contained'
-                            size='small'
-                            color='secondary'
-                        >
-                            <Box px={3}>Track My Order</Box>
-                        </Button>
-                    </Box>
+                    <img
+                        src='/aa.jpg'
+                        alt=''
+                        srcset=''
+                        height='60'
+                        width='60'
+                        style={{ borderRadius: '50%' }}
+                    />
+                    <Typography variant='h5'>
+                        <strong>BIPLOB MAHADI</strong>
+                    </Typography>
                 </Box>
-                <Box
-                    p={2}
-                    mt={3}
-                    boxShadow={1}
-                    borderRadius='borderRadius'
-                    style={{ backgroundColor: 'white' }}
-                >
+                <Box mt={3}>
                     <Grid container spacing={3}>
                         <Grid item xs={12} sm={3}>
-                            <Link href='/my-order-details'>
-                                <Box
-                                    p={2}
-                                    boxShadow={1}
-                                    borderRadius='borderRadius'
-                                    style={{ backgroundColor: '#E6E6FA' }}
-                                >
-                                    <Typography variant='h4'>
-                                        Orders Briefly
+                            <Box
+                                p={1}
+                                boxShadow={1}
+                                borderRadius='borderRadius'
+                                style={{ backgroundColor: 'white' }}
+                            >
+                                <AccountOptionList />
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} sm>
+                            <Box
+                                p={2}
+                                boxShadow={1}
+                                display='flex'
+                                alignItems='center'
+                                borderRadius='borderRadius'
+                                style={{ backgroundColor: 'white' }}
+                            >
+                                <Box height='100%' flexGrow={1}>
+                                    <Typography variant='h5'>
+                                        <strong>My Orders</strong>{' '}
+                                        <Chip
+                                            label={`Total ${12}`}
+                                            color='secondary'
+                                            size='small'
+                                        />
                                     </Typography>
                                 </Box>
-                            </Link>
-                        </Grid>
-                        <Grid item xs={12} sm={3}>
-                            <Box
-                                p={2}
-                                boxShadow={1}
-                                borderRadius='borderRadius'
-                                style={{ backgroundColor: '#E6E6FA' }}
-                            >
-                                <Typography variant='h4'>
-                                    Orders Briefly
-                                </Typography>
+                                <Box height='100%'>
+                                    <Button
+                                        variant='contained'
+                                        size='small'
+                                        color='secondary'
+                                    >
+                                        <Box px={3}>Track My Order</Box>
+                                    </Button>
+                                </Box>
                             </Box>
-                        </Grid>
-                        <Grid item xs={12} sm={3}>
+
                             <Box
+                                mt={2}
                                 p={2}
                                 boxShadow={1}
                                 borderRadius='borderRadius'
-                                style={{ backgroundColor: '#E6E6FA' }}
+                                style={{ backgroundColor: 'white' }}
                             >
-                                <Typography variant='h4'>
-                                    Orders Briefly
-                                </Typography>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} sm={3}>
-                            <Box
-                                p={2}
-                                boxShadow={1}
-                                borderRadius='borderRadius'
-                                style={{ backgroundColor: '#E6E6FA' }}
-                            >
-                                <Typography variant='h4'>
-                                    Orders Briefly
-                                </Typography>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} sm={3}>
-                            <Box
-                                p={2}
-                                boxShadow={1}
-                                borderRadius='borderRadius'
-                                style={{ backgroundColor: '#E6E6FA' }}
-                            >
-                                <Typography variant='h4'>
-                                    Orders Briefly
-                                </Typography>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} sm={3}>
-                            <Box
-                                p={2}
-                                boxShadow={1}
-                                borderRadius='borderRadius'
-                                style={{ backgroundColor: '#E6E6FA' }}
-                            >
-                                <Typography variant='h4'>
-                                    Orders Briefly
-                                </Typography>
+                                <Grid container spacing={3}>
+                                    <Grid item xs={12} sm={4}>
+                                        <Link href='/my-order-details'>
+                                            <Box
+                                                p={2}
+                                                boxShadow={1}
+                                                borderRadius='borderRadius'
+                                                style={{
+                                                    backgroundColor: '#E6E6FA',
+                                                }}
+                                            >
+                                                <Typography variant='h4'>
+                                                    Orders Briefly
+                                                </Typography>
+                                            </Box>
+                                        </Link>
+                                    </Grid>
+                                    <Grid item xs={12} sm={4}>
+                                        <Box
+                                            p={2}
+                                            boxShadow={1}
+                                            borderRadius='borderRadius'
+                                            style={{
+                                                backgroundColor: '#E6E6FA',
+                                            }}
+                                        >
+                                            <Typography variant='h4'>
+                                                Orders Briefly
+                                            </Typography>
+                                        </Box>
+                                    </Grid>
+                                    <Grid item xs={12} sm={4}>
+                                        <Box
+                                            p={2}
+                                            boxShadow={1}
+                                            borderRadius='borderRadius'
+                                            style={{
+                                                backgroundColor: '#E6E6FA',
+                                            }}
+                                        >
+                                            <Typography variant='h4'>
+                                                Orders Briefly
+                                            </Typography>
+                                        </Box>
+                                    </Grid>
+                                    <Grid item xs={12} sm={4}>
+                                        <Box
+                                            p={2}
+                                            boxShadow={1}
+                                            borderRadius='borderRadius'
+                                            style={{
+                                                backgroundColor: '#E6E6FA',
+                                            }}
+                                        >
+                                            <Typography variant='h4'>
+                                                Orders Briefly
+                                            </Typography>
+                                        </Box>
+                                    </Grid>
+                                    <Grid item xs={12} sm={4}>
+                                        <Box
+                                            p={2}
+                                            boxShadow={1}
+                                            borderRadius='borderRadius'
+                                            style={{
+                                                backgroundColor: '#E6E6FA',
+                                            }}
+                                        >
+                                            <Typography variant='h4'>
+                                                Orders Briefly
+                                            </Typography>
+                                        </Box>
+                                    </Grid>
+                                    <Grid item xs={12} sm={4}>
+                                        <Box
+                                            p={2}
+                                            boxShadow={1}
+                                            borderRadius='borderRadius'
+                                            style={{
+                                                backgroundColor: '#E6E6FA',
+                                            }}
+                                        >
+                                            <Typography variant='h4'>
+                                                Orders Briefly
+                                            </Typography>
+                                        </Box>
+                                    </Grid>
+                                </Grid>
                             </Box>
                         </Grid>
                     </Grid>
