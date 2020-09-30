@@ -17,8 +17,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
+import InboxIcon from '@material-ui/icons/Inbox';
 import DraftsIcon from '@material-ui/icons/Drafts';
+
 import SendIcon from '@material-ui/icons/Send';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
@@ -27,6 +28,7 @@ import Divider from '@material-ui/core/Divider';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
+import Box from '@material-ui/core/Box';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 const useStyles = makeStyles((theme) => ({
@@ -100,7 +102,7 @@ export default function ButtonAppBar() {
                 <Link href='/categories'>
                     <ListItem button>
                         <ListItemIcon>
-                            <SendIcon />
+                            <SendIcon fontSize='small' />
                         </ListItemIcon>
                         <ListItemText primary='Sent mail' />
                     </ListItem>
@@ -108,14 +110,14 @@ export default function ButtonAppBar() {
                 <Link href='/tranding'>
                     <ListItem button>
                         <ListItemIcon>
-                            <DraftsIcon />
+                            <DraftsIcon fontSize='small' />
                         </ListItemIcon>
                         <ListItemText primary='Tranding' />
                     </ListItem>
                 </Link>
                 <ListItem button onClick={handleClick}>
                     <ListItemIcon>
-                        <InboxIcon />
+                        <InboxIcon fontSize='small' />
                     </ListItemIcon>
                     <ListItemText primary='Inbox' />
                     {open ? <ExpandLess /> : <ExpandMore />}
@@ -125,20 +127,20 @@ export default function ButtonAppBar() {
                         <Link href='/sub-categories'>
                             <ListItem button className={classes.nested}>
                                 <ListItemIcon>
-                                    <StarBorder />
+                                    <StarBorder fontSize='small' />
                                 </ListItemIcon>
                                 <ListItemText primary='Starred' />
                             </ListItem>
                         </Link>
                         <ListItem button className={classes.nested}>
                             <ListItemIcon>
-                                <StarBorder />
+                                <StarBorder fontSize='small' />
                             </ListItemIcon>
                             <ListItemText primary='Starred' />
                         </ListItem>
                         <ListItem button className={classes.nested}>
                             <ListItemIcon>
-                                <StarBorder />
+                                <StarBorder fontSize='small' />
                             </ListItemIcon>
                             <ListItemText primary='Starred' />
                         </ListItem>
@@ -146,7 +148,7 @@ export default function ButtonAppBar() {
                 </Collapse>
                 <ListItem button onClick={handleClickAgain}>
                     <ListItemIcon>
-                        <InboxIcon />
+                        <InboxIcon fontSize='small' />
                     </ListItemIcon>
                     <ListItemText primary='Inbox' />
                     {openAgain ? <ExpandLess /> : <ExpandMore />}
@@ -155,7 +157,7 @@ export default function ButtonAppBar() {
                     <List dense component='div' disablePadding>
                         <ListItem button className={classes.nested}>
                             <ListItemIcon>
-                                <StarBorder />
+                                <StarBorder fontSize='small' />
                             </ListItemIcon>
                             <ListItemText primary='Starred' />
                         </ListItem>
@@ -165,7 +167,7 @@ export default function ButtonAppBar() {
                             onClick={handleClickAgainAgain}
                         >
                             <ListItemIcon>
-                                <InboxIcon />
+                                <InboxIcon fontSize='small' />
                             </ListItemIcon>
                             <ListItemText primary='Inbox' />
                             {openAgainAgain ? <ExpandLess /> : <ExpandMore />}
@@ -181,7 +183,7 @@ export default function ButtonAppBar() {
                                     className={classes.nestedAgain}
                                 >
                                     <ListItemIcon>
-                                        <StarBorder />
+                                        <StarBorder fontSize='small' />
                                     </ListItemIcon>
                                     <ListItemText primary='Starred' />
                                 </ListItem>
@@ -190,7 +192,7 @@ export default function ButtonAppBar() {
                                     className={classes.nestedAgain}
                                 >
                                     <ListItemIcon>
-                                        <StarBorder />
+                                        <StarBorder fontSize='small' />
                                     </ListItemIcon>
                                     <ListItemText primary='Starred' />
                                 </ListItem>
@@ -199,7 +201,7 @@ export default function ButtonAppBar() {
                                     className={classes.nestedAgain}
                                 >
                                     <ListItemIcon>
-                                        <StarBorder />
+                                        <StarBorder fontSize='small' />
                                     </ListItemIcon>
                                     <ListItemText primary='Starred' />
                                 </ListItem>
@@ -207,13 +209,13 @@ export default function ButtonAppBar() {
                         </Collapse>
                         <ListItem button className={classes.nested}>
                             <ListItemIcon>
-                                <StarBorder />
+                                <StarBorder fontSize='small' />
                             </ListItemIcon>
                             <ListItemText primary='Starred' />
                         </ListItem>
                         <ListItem button className={classes.nested}>
                             <ListItemIcon>
-                                <StarBorder />
+                                <StarBorder fontSize='small' />
                             </ListItemIcon>
                             <ListItemText primary='Starred' />
                         </ListItem>
@@ -278,36 +280,51 @@ export default function ButtonAppBar() {
                     >
                         <Link href='my-account'>
                             <MenuItem onClick={handleClose}>
-                                My account
+                                <InboxIcon fontSize='small' />
+                                <Box ml={2}>My Account</Box>
                             </MenuItem>
                         </Link>
                         <Divider variant='middle' />
                         <Link href='my-orders'>
-                            <MenuItem onClick={handleClose}>My Orders</MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <DraftsIcon fontSize='small' />
+                                <Box ml={2}>My Orders</Box>
+                            </MenuItem>
                         </Link>
                         <Divider variant='middle' />
                         <Link href='my-lottery'>
                             <MenuItem onClick={handleClose}>
-                                My Lottery
+                                <InboxIcon fontSize='small' />
+                                <Box ml={2}>My Lottery</Box>
                             </MenuItem>
                         </Link>
                         <Divider variant='middle' />
                         <Link href='my-review'>
-                            <MenuItem onClick={handleClose}>My Review</MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <DraftsIcon fontSize='small' />
+                                <Box ml={2}>My Review</Box>
+                            </MenuItem>
                         </Link>
                         <Divider variant='middle' />
                         <Link href='my-video-review'>
                             <MenuItem onClick={handleClose}>
-                                My Video Review
+                                <InboxIcon fontSize='small' />
+                                <Box ml={2}>My Video Review</Box>
                             </MenuItem>
                         </Link>
                         <Divider variant='middle' />
                         <Link href='my-gift'>
-                            <MenuItem onClick={handleClose}>I Gift It</MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <DraftsIcon fontSize='small' />
+                                <Box ml={2}>I Gift It</Box>
+                            </MenuItem>
                         </Link>
                         <Divider variant='middle' />
                         <Link href='/'>
-                            <MenuItem onClick={handleClose}>Logout</MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <InboxIcon fontSize='small' />
+                                <Box ml={2}>Logout</Box>
+                            </MenuItem>
                         </Link>
                     </Menu>
                     {/* menu end */}

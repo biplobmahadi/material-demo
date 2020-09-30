@@ -97,7 +97,26 @@ export default function Product() {
                                         size='small'
                                     />
                                 </Box>
-                                <Box pt={2}>
+                                <Box mt={3}>
+                                    <Grid container spacing={2}>
+                                        <Grid item xs={12} sm>
+                                            <Typography variant='p'>
+                                                Color
+                                            </Typography>
+                                        </Grid>
+                                        <Grid item xs={12} sm>
+                                            <Typography variant='p'>
+                                                Size
+                                            </Typography>
+                                        </Grid>
+                                    </Grid>
+                                    <Box mt={2}>
+                                        <Typography variant='p'>
+                                            Quantity
+                                        </Typography>
+                                    </Box>
+                                </Box>
+                                <Box mt={2}>
                                     <Button variant='contained' color='primary'>
                                         <Box textAlign='center' px={4}>
                                             Add To Bag

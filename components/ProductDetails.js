@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import ButtonAppBar from '../components/ButtonAppBar';
+import ProductDetailsTable from './ProductDetailsTable';
 import SubCataCard from '../components/SubCataCard';
 import ProductCard from '../components/ProductCard';
 import Footer from '../components/Footer';
@@ -19,7 +19,7 @@ import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 import { makeStyles } from '@material-ui/core/styles';
 import Rating from '@material-ui/lab/Rating';
-
+import ReactPlayer from 'react-player/youtube';
 const labels = {
     0.5: 'Useless',
     1: 'Useless+',
@@ -65,15 +65,29 @@ export default function ProductDetails() {
                             <Typography variant='h4'>
                                 Product Details
                             </Typography>
+                            <Divider variant='middle' />
+                            <Box mt={2} borderRadius='borderRadius'>
+                                <ProductDetailsTable />
+                            </Box>
                         </Box>
                     </Grid>
                     <Grid item xs={12} sm>
                         <Box
                             p={2}
+                            height='100%'
                             borderRadius='borderRadius'
                             style={{ backgroundColor: 'white' }}
                         >
                             <Typography variant='h4'>Video Details</Typography>
+                            <Divider variant='middle' />
+                            <Box mt={2}>
+                                <ReactPlayer
+                                    width='100%'
+                                    controls
+                                    light
+                                    url='https://www.youtube.com/watch?v=pAPQFqdFDdY'
+                                />
+                            </Box>
                         </Box>
                     </Grid>
                 </Grid>
@@ -138,21 +152,60 @@ export default function ProductDetails() {
                     mt={2}
                     borderRadius='borderRadius'
                 >
-                    <Grid container spacing={3}>
-                        <Grid item xs={12} sm>
-                            <ProductCard />
+                    <Grid container spacing={4}>
+                        <Grid item xs={12} sm={4}>
+                            <ReactPlayer
+                                width='100%'
+                                height='280px'
+                                controls
+                                light
+                                url='https://www.youtube.com/watch?v=pAPQFqdFDdY'
+                            />
                         </Grid>
-                        <Grid item xs={12} sm>
-                            <ProductCard />
+                        <Grid item xs={12} sm={4}>
+                            <ReactPlayer
+                                width='100%'
+                                height='280px'
+                                controls
+                                light
+                                url='https://www.youtube.com/watch?v=pAPQFqdFDdY'
+                            />
                         </Grid>
-                        <Grid item xs={12} sm>
-                            <ProductCard />
+                        <Grid item xs={12} sm={4}>
+                            <ReactPlayer
+                                width='100%'
+                                height='280px'
+                                controls
+                                light
+                                url='https://www.youtube.com/watch?v=pAPQFqdFDdY'
+                            />
                         </Grid>
-                        <Grid item xs={12} sm>
-                            <ProductCard />
+                        <Grid item xs={12} sm={4}>
+                            <ReactPlayer
+                                width='100%'
+                                height='280px'
+                                controls
+                                light
+                                url='https://www.youtube.com/watch?v=pAPQFqdFDdY'
+                            />
                         </Grid>
-                        <Grid item xs={12} sm>
-                            <ProductCard />
+                        <Grid item xs={12} sm={4}>
+                            <ReactPlayer
+                                width='100%'
+                                height='280px'
+                                controls
+                                light
+                                url='https://www.youtube.com/watch?v=pAPQFqdFDdY'
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={4}>
+                            <ReactPlayer
+                                width='100%'
+                                height='280px'
+                                controls
+                                light
+                                url='https://www.youtube.com/watch?v=pAPQFqdFDdY'
+                            />
                         </Grid>
                     </Grid>
                 </Box>

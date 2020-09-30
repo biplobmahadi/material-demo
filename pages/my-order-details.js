@@ -119,6 +119,7 @@ export default function MyOrderDetails() {
                                     onChange={handleChange}
                                     indicatorColor='primary'
                                     textColor='primary'
+                                    variant='fullWidth'
                                     centered
                                 >
                                     <Tab label='Order Details' value='0' />
