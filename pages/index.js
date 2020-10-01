@@ -5,10 +5,12 @@ import Card from '../components/Card';
 import ProductCard from '../components/ProductCard';
 import Footer from '../components/Footer';
 import MainFooter from '../components/MainFooter';
+import FormikFormDemo from '../components/FormikFormDemo';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+
 export default function Home() {
     return (
         <div>
@@ -259,6 +261,9 @@ export default function Home() {
             <Footer />
             <Box style={{ backgroundColor: '#E6E6FA' }} mt={4}>
                 <MainFooter />
+            </Box>
+            <Box m={4} pb={4}>
+                <FormikFormDemo />
             </Box>
         </div>
     );

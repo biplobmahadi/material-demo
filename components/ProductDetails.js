@@ -144,7 +144,7 @@ export default function ProductDetails() {
                     borderRadius='borderRadius'
                     style={{ backgroundColor: 'white' }}
                 >
-                    <Typography variant='h4'>YouTube Video Review</Typography>
+                    <Typography variant='h4'>Customer Video Review</Typography>
                 </Box>
                 <Box
                     style={{ backgroundColor: 'white' }}

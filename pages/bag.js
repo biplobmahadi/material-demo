@@ -135,6 +135,9 @@ export default function Bag() {
             <Box style={{ backgroundColor: '#E6E6FA' }} mt={4}>
                 <MainFooter />
             </Box>
+            <Box m={4} pb={4}>
+                <FormikFormDemo />
+            </Box>
         </div>
     );
 }

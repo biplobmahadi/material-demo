@@ -72,7 +72,7 @@ export default function Product() {
                                     <br />
                                     <strong>Brand: RichMan</strong>
                                 </div>
-                                <Box pt={2}>
+                                <Box py={2}>
                                     <StarIcon color='secondary' />
                                     <StarIcon color='secondary' />
                                     <StarIcon color='secondary' />
@@ -85,6 +85,7 @@ export default function Product() {
                                     <span> | </span>
                                     <span>Give a Review</span>
                                 </Box>
+                                <Divider variant='middle' />
                                 <Box pt={2}>
                                     <Typography variant='h4'>
                                         <strong>Tk. 500</strong>
