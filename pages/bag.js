@@ -11,6 +11,7 @@ import Chip from '@material-ui/core/Chip';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import FormikFormDemo from '../components/FormikFormDemo';
 export default function Bag() {
     return (
         <div>
